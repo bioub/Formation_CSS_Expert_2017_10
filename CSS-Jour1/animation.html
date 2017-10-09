@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    body > div {
+      animation-name: pingpongy;
+      animation-duration: 200ms;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: ease-in;
+    }
+
+    div > div {
+      animation-name: pingpongx;
+      animation-duration: 400ms;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      width: 100px;
+      height: 100px;
+      background: orange;
+      border-radius: 50px;
+      animation-timing-function: ease-out;
+    }
+
+    @keyframes pingpongx {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(500px);
+      }
+    }
+
+    @keyframes pingpongy {
+      from {
+        transform: translateY(0);
+      }
+
+      to {
+        transform: translateY(500px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div></div>
+  </div>
+</body>
+</html>

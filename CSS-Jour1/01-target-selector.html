@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Target selector</title>
+  <style>
+    .page {
+      opacity: 1;
+      transition: all 400ms ease-in;
+      position: absolute;
+    }
+
+    .page:not(:target) {
+      opacity: 0;
+      transform: translateY(-2000px);
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a href="#page1">Page 1</a>
+  <a href="#page2">Page 2</a>
+  <a href="#page3">Page 3</a>
+</nav>
+<div class="page" id="page1">
+  <h2>Page 1</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur corporis culpa debitis, dolor
+    eligendi iure, laboriosam magnam nihil numquam omnis quaerat quasi recusandae, repudiandae tempora vero vitae
+    voluptatem! Eos?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur corporis culpa debitis, dolor
+    eligendi iure, laboriosam magnam nihil numquam omnis quaerat quasi recusandae, repudiandae tempora vero vitae
+    voluptatem! Eos?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur corporis culpa debitis, dolor
+    eligendi iure, laboriosam magnam nihil numquam omnis quaerat quasi recusandae, repudiandae tempora vero vitae
+    voluptatem! Eos?
+  </p>
+</div>
+<div class="page" id="page2">
+  <h2>Page 2</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur corporis culpa debitis, dolor
+    eligendi iure, laboriosam magnam nihil numquam omnis quaerat quasi recusandae, repudiandae tempora vero vitae
+    voluptatem! Eos?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur corporis culpa debitis, dolor
+    eligendi iure, laboriosam magnam nihil numquam omnis quaerat quasi recusandae, repudiandae tempora vero vitae
+    voluptatem! Eos?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur corporis culpa debitis, dolor
+    eligendi iure, laboriosam magnam nihil numquam omnis quaerat quasi recusandae, repudiandae tempora vero vitae
+    voluptatem! Eos?
+  </p>
+</div>
+<div class="page" id="page3">
+  <h2>Page 3</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur corporis culpa debitis, dolor
+    eligendi iure, laboriosam magnam nihil numquam omnis quaerat quasi recusandae, repudiandae tempora vero vitae
+    voluptatem! Eos?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur corporis culpa debitis, dolor
+    eligendi iure, laboriosam magnam nihil numquam omnis quaerat quasi recusandae, repudiandae tempora vero vitae
+    voluptatem! Eos?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur corporis culpa debitis, dolor
+    eligendi iure, laboriosam magnam nihil numquam omnis quaerat quasi recusandae, repudiandae tempora vero vitae
+    voluptatem! Eos?
+  </p>
+</div>
+</body>
+</html>

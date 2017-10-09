@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+
+.container {
+    width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    height: 150px;
+    background: #479ef8;
+    color: #ffffff;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0.67em 0;
+}
+
+header nav {
+    background: #65b739;
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    top: 0;
+    right: 0;
+
+    text-align: center; /* centrage horizontal de texte */
+    line-height: 40px; /* centrage vertical de texte si 1 seule ligne */
+}
+
+.page > * {
+    float: left;
+}
+
+.page::after {
+    content: ' ';
+    display: block;
+    clear: left;
+}
+
+.page aside {
+    width: 30%;
+    background: #f4cd24;
+}
+
+.page aside a {
+    display: block;
+    background: #f28418;
+    height: 30px;
+    margin: 0.67em 0;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 30px;
+}
+
+.page main {
+    width: 70%;
+    padding: 10px
+}
+
+.breadcrumb > a {
+    text-decoration: none;
+}
+
+.breadcrumb > *:not(:last-child)::after {
+    content: '•';
+    color: #000000;
+    margin-left: 4px;
+}
+
+.gallery {
+    margin: 0.67em 0;
+}
+
+.gallery > .image {
+    width: 30%;
+    height: 140px;
+    background: #f28418;
+    float: left;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.gallery::after {
+    content: ' ';
+    display: block;
+    clear: left;
+}
