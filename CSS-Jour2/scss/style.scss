@@ -1,0 +1,85 @@
+@import "_functions";
+@import "_variables";
+@import "_reset";
+
+.container {
+  @include center-block();
+  width: 900px;
+  display: grid;
+  grid-template-areas: "a a"
+  "b c";
+  grid-template-rows: 150px auto;
+  grid-template-columns: 200px 1fr;
+}
+
+header {
+  background: #479ef8;
+  color: #ffffff;
+  position: relative;
+  grid-area: a;
+
+  h1 {
+    margin: 0;
+    padding: 0.67em 0;
+  }
+
+  nav {
+    background: #65b739;
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    top: 0;
+    right: 0;
+
+    text-align: center; /* centrage horizontal de texte */
+    line-height: 40px; /* centrage vertical de texte si 1 seule ligne */
+  }
+
+}
+
+
+
+aside {
+  background: lighten($orange, 10%);
+  grid-area: b;
+
+  a {
+    display: block;
+    background: $orange;
+    height: 30px;
+    margin: 0.67em 0;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 30px;
+  }
+}
+
+main {
+  padding: 10px;
+  grid-area: c;
+}
+
+.breadcrumb {
+  > a {
+    text-decoration: none;
+  }
+  > *:not(:last-child)::after {
+    content: '•';
+    color: #000000;
+    margin-left: 4px;
+  }
+}
+
+.gallery {
+  margin: 0.67em 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+
+  > .image {
+    background: $orange;
+    height: 140px;
+  }
+
+}
