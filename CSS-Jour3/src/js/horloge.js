@@ -1,4 +1,5 @@
 import { currentLocaleTime } from 'utilities/time';
+import '../scss/horloge.scss';
 
 export class Horloge {
   /**
