@@ -4,17 +4,17 @@
 
 .container {
   @include center-block();
+
   width: 900px;
   display: grid;
-  grid-template-areas: "a a"
-  "b c";
-  grid-template-rows: 150px auto;
-  grid-template-columns: 200px 1fr;
+  grid-template: [header-left] "a a" 150px [header-right]
+                 [main-left]   "b c" auto [main-right]
+                 / 200px 1fr;
 }
 
 header {
   background: #479ef8;
-  color: #ffffff;
+  color: #fff;
   position: relative;
   grid-area: a;
 
@@ -30,14 +30,11 @@ header {
     height: 40px;
     top: 0;
     right: 0;
-
     text-align: center; /* centrage horizontal de texte */
     line-height: 40px; /* centrage vertical de texte si 1 seule ligne */
   }
 
 }
-
-
 
 aside {
   background: lighten($orange, 10%);
@@ -50,7 +47,7 @@ aside {
     margin: 0.67em 0;
     text-align: center;
     text-decoration: none;
-    color: #ffffff;
+    color: #fff;
     line-height: 30px;
   }
 }
@@ -64,9 +61,10 @@ main {
   > a {
     text-decoration: none;
   }
+
   > *:not(:last-child)::after {
     content: '•';
-    color: #000000;
+    color: #000;
     margin-left: 4px;
   }
 }

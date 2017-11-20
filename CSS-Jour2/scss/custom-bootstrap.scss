@@ -1,12 +1,15 @@
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
+
+$grid-columns:                24 !default;
+
 @import "../node_modules/bootstrap/scss/mixins";
 
 $primary: purple;
 
 $theme-colors: (
-        "primary":    $primary,
-        "light":      $light,
+  "primary":    $primary,
+  "light":      $light,
 );
 
 
@@ -17,6 +20,11 @@ $theme-colors: (
 //@import "../node_modules/bootstrap/scss/images";
 //@import "../node_modules/bootstrap/scss/code";
 @import "../node_modules/bootstrap/scss/grid";
+
+@if $enable-grid-classes {
+  @include make-grid-columns(24);
+}
+
 //@import "../node_modules/bootstrap/scss/tables";
 //@import "../node_modules/bootstrap/scss/forms";
 @import "../node_modules/bootstrap/scss/buttons";
